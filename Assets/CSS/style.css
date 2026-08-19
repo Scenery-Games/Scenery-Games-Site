@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Belanosima:wght@400;600;700&display=swap');
+
+* {
+    font-family: 'Belanosima';
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+
+body {
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    background-color: #060112; 
+    color: #F0F0F0; 
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    z-index: 2;
+    background-color: #0b0024;
+    padding: 10px 300px;
+    display: flex;
+    align-items: center;
+}
+
+.sg-header {
+    height: 30px; 
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+:root {
+    --tempo-animacao: 6s; 
+}
+
+.sg-logo {
+    max-width: 500px; 
+    margin-bottom: 20px;
+
+    animation: pulsar var(--tempo-animacao) infinite ease-in-out;
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: normal;
+    margin: 0;
+}
+
+@keyframes pulsar {
+    0% { filter: drop-shadow(0 0 10px rgba(26, 8, 54, 0.4)); }
+    50% { filter: drop-shadow(0 0 40px rgba(148, 0, 211, 0.6)); } 
+    100% { filter: drop-shadow(0 0 10px rgba(26, 8, 54, 0.4)); }
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b0024; 
+    padding: 10px;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 10px 30px;
+    }
+
+    .sg-logo {
+        max-width: 300px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+} 
